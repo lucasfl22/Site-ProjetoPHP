@@ -1,0 +1,101 @@
+.bjogos {
+    color: #a5a3a3;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 30px 20px;
+    margin: 80px auto 60px;
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e, #1a1a1a);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.h1-jogos {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ffd700, #ffcc00, #ffb700, #ffe033);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+.jogos-nav {
+    background: #1f1f1f;
+    padding: 15px 0;
+    border-radius: 15px;
+}
+
+.jogos-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogos-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background: #ff1e00;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.jogos-btn:hover {
+    transform: scale(1.1);
+}
+
+.jogos-btn.brasileirao {
+    background: linear-gradient(90deg, #0a37ff, #888888, #ffe600);
+}
+
+.jogos-btn.brasileirao:hover {
+    background: linear-gradient(90deg, #0a37ff7a, #888888, #ffe6007e);
+}
+
+.jogos-btn.cdb {
+    background: linear-gradient(90deg, #0c00b4, #06b600b4, #ffc400);
+}
+
+.jogos-btn.cdb:hover {
+    background: linear-gradient(90deg, #0c00b480, #06c00085, #ffc40080);
+}
+
+.jogos-btn.libertadores {
+    background: linear-gradient(180deg, #c27e00d5, #ffc400, #000000, #ffc400, #c27e00d3);
+}
+
+.jogos-btn.libertadores:hover {
+    background: linear-gradient(180deg, #c27e0081, #ffc40080, #0000007c, #ffc40080, #c27e0080);
+}
+
+.jogos-btn.sulamericana {
+    background: linear-gradient(90deg, #525252d5 0%, #b6b6b6 30%, rgb(255, 196, 0) 50%, rgba(255, 196, 0, 1) 0%, rgb(255, 196, 0) 0%, #b6b6b6 70%, #525252d5 100%);
+}
+
+.jogos-btn.sulamericana:hover {
+    background: linear-gradient(90deg, #5252527c 0%, #b6b6b67e 30%, rgba(255, 196, 0, 0.493) 50%, rgba(255, 196, 0, 0.493) 0%, rgba(255, 196, 0, 0.486) 0%, #b6b6b67a 70%, #5252527c 100%);
+}
+
+.jogos-btn.paulista {
+    background: linear-gradient(90deg, #0c00b4, #ffae00, #ff004c);
+}
+
+.jogos-btn.paulista:hover {
+    background: linear-gradient(-90deg, #0c00b483, #ffae0081, #ff004c7e);
+}

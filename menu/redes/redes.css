@@ -1,0 +1,87 @@
+.redes-sociais {
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: 80px auto 60px;
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e, #1a1a1a);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.h1-redes {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff0000, #ff4d4d, #ff1a1a, #ff6666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.redes-nav {
+    background: linear-gradient(145deg, #1f1f1f, #333333);
+    padding: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.redes-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.redes-btn {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.redes-btn:hover {
+    transform: scale(1.1);
+}
+
+.redes-btn.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+}
+
+.redes-btn.instagram:hover {
+    background: linear-gradient(45deg, #e6683c, #f09433, #dc2743, #cc2366, #bc1888);
+}
+
+.redes-btn.youtube {
+    background: linear-gradient(45deg, #ff0000, #ffffff);
+    color: #fff;
+}
+
+.redes-btn.youtube:hover {
+    background: linear-gradient(45deg, #ffffff, #ff0000);
+}
+
+.redes-btn.facebook {
+    background: linear-gradient(45deg, #1877f2, #ffffff);
+    color: #fff;
+}
+
+.redes-btn.facebook:hover {
+    background: linear-gradient(45deg, #ffffff, #1877f2);
+}
+
+.redes-btn.tiktok {
+    background: linear-gradient(45deg, #de2e3e, #010101, #69c9d0);
+    color: #fff;
+}
+
+.redes-btn.tiktok:hover {
+    background: linear-gradient(45deg, #010101, #de2e3e, #69c9d0);;
+}
