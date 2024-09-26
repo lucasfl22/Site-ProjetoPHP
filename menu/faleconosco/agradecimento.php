@@ -66,31 +66,34 @@
         $avaliacao = $_POST['avaliacao'] ?? '';
 
         $arquivo = fopen("contato.txt", "a");
-
-        if ($arquivo) {
-            fwrite($arquivo, "Nome: " . $nome . "\n");
-            fwrite($arquivo, "Email: " . $email . "\n");
-            fwrite($arquivo, "Telefone: " . $telefone . "\n");
-            
-            if (!empty($comentario)) {
-                fwrite($arquivo, "Comentário: " . $comentario . "\n");
-            }
-            if (!empty($denuncia)) {
-                fwrite($arquivo, "Denúncia: " . $denuncia . "\n");
-            }
-            if (!empty($sugestao)) {
-                fwrite($arquivo, "Sugestão: " . $sugestao . "\n");
-            }
-            if (!empty($avaliacao)) {
-                fwrite($arquivo, "Avaliação: " . $avaliacao . "\n");
-            }
-            
-            fwrite($arquivo, "Mensagem: " . $mensagem . "\n");
-            fwrite($arquivo, "\n");
-            fclose($arquivo);
-        } else {
+        if (!$arquivo) {
             echo "Erro ao abrir o arquivo.";
+            return;
         }
+
+        fwrite($arquivo, "Nome: " . $nome . "\n");
+        fwrite($arquivo, "Email: " . $email . "\n");
+        fwrite($arquivo, "Telefone: " . $telefone . "\n");
+        
+        if (!empty($comentario)) {
+            fwrite($arquivo, "Comentário: " . $comentario . "\n");
+        }
+
+        if (!empty($denuncia)) {
+            fwrite($arquivo, "Denúncia: " . $denuncia . "\n");
+        }
+
+        if (!empty($sugestao)) {
+            fwrite($arquivo, "Sugestão: " . $sugestao . "\n");
+        }
+
+        if (!empty($avaliacao)) {
+            fwrite($arquivo, "Avaliação: " . $avaliacao . "\n");
+        }
+        
+        fwrite($arquivo, "Mensagem: " . $mensagem . "\n");
+        fwrite($arquivo, "\n");
+        fclose($arquivo);
     ?>
 </body>
 </html>
