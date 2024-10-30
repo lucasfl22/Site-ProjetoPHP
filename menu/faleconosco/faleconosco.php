@@ -2,7 +2,7 @@
     <h1>Fale Conosco</h1>
     <p>Por favor, preencha o formulário abaixo para enviar seus comentários, denúncias, sugestões ou avaliações sobre o site. Sua opinião é muito importante para nós!</p>
     <div class="form-container">
-        <form class="form-contato" action="menu/faleconosco/agradecimento.php" method="post">
+        <form class="form-contato" action="menu/faleconosco/envia_msg.php" method="post">
             <fieldset class="fieldset-informacoes">
                 <legend>Informações de Contato</legend>
                 <label for="nome">Nome:</label>
@@ -17,10 +17,10 @@
 
             <fieldset class="fieldset-opcao">
                 <legend>Tipo de Mensagem</legend>
-                <label><input type="radio" name="comentario" value="comentario" required> Comentário</label>
-                <label><input type="radio" name="comentario" value="denuncia"> Denúncia</label>
-                <label><input type="radio" name="comentario" value="sugestao"> Sugestão</label>
-                <label><input type="radio" name="comentario" value="avaliacao"> Avaliação do Site</label>
+                <label><input type="radio" name="tipo_mensagem" value="comentario" required> Comentário</label>
+                <label><input type="radio" name="tipo_mensagem" value="denuncia"> Denúncia</label>
+                <label><input type="radio" name="tipo_mensagem" value="sugestao"> Sugestão</label>
+                <label><input type="radio" name="tipo_mensagem" value="avaliacao"> Avaliação do Site</label>
             </fieldset>
 
 

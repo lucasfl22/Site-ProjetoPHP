@@ -1,3 +1,30 @@
+<?php 
+include_once("config.inc.php");
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_REQUEST['nome'];
+    $email = $_REQUEST['email'];
+    $telefone = $_REQUEST['telefone'];
+    $mensagem = $_REQUEST['mensagem'];
+
+    $tipo = $_REQUEST['tipo_mensagem'];
+    $comentario = ($tipo == 'comentario');
+    $denuncia = ($tipo == 'denuncia');
+    $sugestao = ($tipo == 'sugestao');
+    $avaliacao = ($tipo == 'avaliacao');
+
+    $sql = "INSERT INTO contato (nome, email, telefone, mensagem, comentario, denuncia, sugestao, avaliacao) 
+    VALUES ('$nome', '$email', '$telefone', '$mensagem', '$comentario', '$denuncia', '$sugestao', '$avaliacao')";
+
+    $query = mysqli_query($conexao, $sql);
+
+    if (!$query) {
+        die("Erro ao enviar mensagem!");
+    }
+
+    mysqli_close($conexao);
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -54,46 +81,5 @@
         <p class="message-text">Recebemos sua mensagem e ela será cuidadosamente avaliada pela nossa equipe. Em breve, entraremos em contato se necessário. Agradecemos por sua contribuição!</p>
         <a href="/projetophp/index.php" class="back-link">Voltar para a página inicial</a>
     </div>
-
-    <?php 
-        $email = $_POST['email'] ?? '';
-        $nome = $_POST['nome'] ?? '';
-        $telefone = $_POST['telefone'] ?? '';
-        $mensagem = $_POST['mensagem'] ?? '';
-        $comentario = $_POST['comentario'] ?? '';
-        $denuncia = $_POST['denuncia'] ?? '';
-        $sugestao = $_POST['sugestao'] ?? '';
-        $avaliacao = $_POST['avaliacao'] ?? '';
-
-        $arquivo = fopen("contato.txt", "a");
-        if (!$arquivo) {
-            echo "Erro ao abrir o arquivo.";
-            return;
-        }
-
-        fwrite($arquivo, "Nome: " . $nome . "\n");
-        fwrite($arquivo, "Email: " . $email . "\n");
-        fwrite($arquivo, "Telefone: " . $telefone . "\n");
-        
-        if (!empty($comentario)) {
-            fwrite($arquivo, "Comentário: " . $comentario . "\n");
-        }
-
-        if (!empty($denuncia)) {
-            fwrite($arquivo, "Denúncia: " . $denuncia . "\n");
-        }
-
-        if (!empty($sugestao)) {
-            fwrite($arquivo, "Sugestão: " . $sugestao . "\n");
-        }
-
-        if (!empty($avaliacao)) {
-            fwrite($arquivo, "Avaliação: " . $avaliacao . "\n");
-        }
-        
-        fwrite($arquivo, "Mensagem: " . $mensagem . "\n");
-        fwrite($arquivo, "\n");
-        fclose($arquivo);
-    ?>
 </body>
-</html>
+</html

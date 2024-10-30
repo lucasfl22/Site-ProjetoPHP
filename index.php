@@ -33,5 +33,3 @@
     include_once("rodape/rodape.php");
 
 ?>
-</body>
-</html>
